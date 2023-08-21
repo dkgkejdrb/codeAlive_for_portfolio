@@ -1,0 +1,1115 @@
+@import '~antd/dist/antd.css';
+
+/* CSS 스타일 리셋 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+  height: 3500px;
+
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+/* ================ 여기어때 폰트스타일 ================== */
+@font-face {
+	font-family: "thisHow";
+	src: url("./Assets/JalnanOTF.otf");
+}
+
+/* ================ 카페24 폰트스타일 ================== */
+@font-face {
+	font-family: "cafe24";
+	src: url("./Assets/Cafe24Ssurround.ttf");
+}
+
+
+
+/* ================ 메인페이지 > 헤더 > 버튼 마우스 오버시, 글자색 변경 ================== */
+.mainPage .header .ant-btn.ant-btn-background-ghost:focus, .mainPage .ant-btn.ant-btn-background-ghost:hover {
+	/* color: #B39BFF!important; */
+	/* color: #906FFF!important; */
+	color: #3888FF!important;
+}
+
+/* ================ 마이페이지 > 헤더 > 버튼 마우스 오버시, 글자색 변경 ================== */
+.myPage .header2 .ant-btn.ant-btn-background-ghost:focus, .myPage .ant-btn.ant-btn-background-ghost:hover {
+	color: #3888FF!important;
+}
+
+/* ================ 헤더 > 메뉴 아이템 크기 변경 ================== */
+.header .ant-menu-item {
+	text-align: center;
+	line-height: 500%;
+	font-size: '17px'; 
+	font-family: 'Noto Sans', 'sans-serif';
+	font-weight: '800';
+}
+
+.header2 .ant-menu-item {
+	text-align: center;
+	line-height: 500%;
+	font-size: '17px'; 
+	font-family: 'Noto Sans', 'sans-serif';
+	font-weight: '800';
+}
+
+
+/* 코드얼라이브, 카테고리 고객센터 */
+.header .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu {
+	width: 110.53px!important;
+	text-align: center;
+	line-height: 500%;
+	padding: 0px!important;
+}
+
+.header2 .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu {
+	width: 110.53px!important;
+	text-align: center;
+	line-height: 500%;
+	padding: 0px!important;
+}
+
+
+/* 소개, 기업교육 */
+.header .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item {
+	width: 111.29px!important;
+	padding: 0px!important;
+	height: 86px;
+}
+
+.header2 .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item {
+	width: 111.29px!important;
+	padding: 0px!important;
+	height: 86px;
+}
+
+
+
+/* ================ 2. 메인배너 ================== */
+.mainBanner {
+	width: 100%;
+	margin-top: -10px;
+}
+
+.mainBanner>.carouselWrap {
+	width: 100%;
+	height: 100%;
+}
+
+.scrollBox>.text {
+	margin-top: 20px;
+	margin-top: 0px;
+	animation: arrowAnimation 0.5s 0s infinite ease-in-out alternate;
+}
+
+@keyframes arrowAnimation {
+	0%{margin-top: 20px;}
+	100%{margin-top: 0px;}
+}
+
+
+
+
+@keyframes higlightAnimation {
+	0%{
+		transform-origin: left;
+		transform: scaleX(0)
+	}
+	100%{
+		transform-origin: left;
+		transform: scaleX(1)
+	}
+}
+
+/* 메인페이지 > 헤더 > 메뉴 간격 조절 */
+.mainPage .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu {
+	margin-left: 20px!important;
+}
+
+.mainPage .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item {
+	margin-left: 20px!important;
+}
+
+/* 메인페이지 > 헤더 > 메뉴 효과 */
+.mainPage .ant-menu-item-selected,
+.mainPage .ant-menu-item-active,
+.mainPage .ant-menu-light .ant-menu-submenu-title:hover,
+/* .mainPage .ant-menu-submenu-selcted, */
+/* .mainPage .ant-menu-horizontal>.ant-menu-submenu-active, */
+.mainPage .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu-selected
+{
+	/* color: #B39BFF!important; */
+	/* color: #906FFF!important; */
+	color: #3888FF!important;
+}
+
+/* 메뉴 호버 또는 메뉴에서 다른 메뉴로 마우스 호버시, 밑줄 표시 효과 */
+.mainPage .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item-active:after, 
+.mainPage .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item-open:after, 
+.mainPage .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item-selected:after, 
+.mainPage .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item:hover:after,
+.mainPage .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu-active:after,
+.mainPage .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu-open:after, 
+.mainPage .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu-selected:after, 
+.mainPage .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu:hover:after
+{
+	/* border-bottom: 7px solid #B39BFF!important; */
+	/* border-bottom: 7px solid #906FFF!important; */
+	border-bottom: 4px solid #3888FF!important;
+	animation: higlightAnimation 0.8s forwards!important;
+	border-radius: 7px;
+}
+
+.mainPage .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item-active, 
+.mainPage .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item-open, 
+.mainPage .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item-selected, 
+.mainPage .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item:hover, 
+.mainPage .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu-active, 
+.mainPage .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu-open, 
+.mainPage .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu-selected, 
+.mainPage .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu:hover
+{
+	/* color: #B39BFF!important; */
+	/* color: #906FFF!important; */
+	color: #3888FF!important;
+}
+
+/* 메인페이지 > 헤더 > 서브 팝업 메뉴 위아래 간격 */
+/* 서브 메뉴 글자 속성 변경 */
+.ant-menu-vertical.ant-menu-sub:not([class*=-active]) {
+	min-width: 142px!important;
+	width: 142px!important;
+	margin-top: -5px!important;
+	background-color: #fff!important;
+	box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.15)!important;
+	border-radius: 10px!important;
+	text-align: center!important;
+	/* 서브메뉴 가운데로 위치로 조절 */
+	margin-left: -14px!important;
+
+	font-family: 'Noto Sans', 'sans-serif'!important;
+	font-weight: 500!important;
+	font-size: 14px!important;
+	color: #454545!important;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.ant-menu-submenu .ant-menu-item.ant-menu-item-active.ant-menu-item-only-child {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 111px!important;
+	background-color: #F5F2FF!important;
+	border-radius: 21px!important;
+	color: #454545!important;
+	padding: 0px!important;
+}
+
+.ant-menu-item .ant-menu-item-only-child{
+	padding: 0px!important;
+}
+
+.ant-menu-item.ant-menu-item-selected.ant-menu-item-only-child{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 111px!important;
+	background-color: #F5F2FF!important;
+	border-radius: 21px!important;
+	color: #454545!important;
+}
+
+.ant-menu-item {
+	transition: none!important;
+}
+
+.ant-menu.ant-menu-sub.ant-menu-vertical {
+	padding-top: 16px!important;
+	padding-bottom: 16px!important;
+}
+
+/* .ant-menu-item.ant-menu-item-only-child:nth-last-child(1) {
+	margin-bottom: 25px!important;
+} */
+
+
+
+/* 전체 헤더 > 메뉴 간격 조절 */
+.ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu {
+	margin-left: 20px!important;
+}
+
+.ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item {
+	margin-left: 20px!important;
+}
+
+/* 마이페이지 > 헤더 > 메뉴 효과 */
+.header2 .ant-menu-item-selected,
+.header2 .ant-menu-item-active,
+.header2 .ant-menu-light .ant-menu-submenu-title:hover,
+.header2 .ant-menu-submenu-selcted,
+.header2 .ant-menu-horizontal>.ant-menu-submenu-active,
+.header2 .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu-selected
+{
+	color: #3888FF!important;
+}
+
+/* 메뉴 호버 또는 메뉴에서 다른 메뉴로 마우스 호버시, 밑줄 표시 효과 */
+.header2 .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item-active:after, 
+.header2 .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item-open:after, 
+.header2 .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item-selected:after, 
+.header2 .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item:hover:after, 
+.header2 .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu-active:after, 
+.header2 .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu-open:after, 
+.header2 .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu-selected:after, 
+.header2 .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu:hover:after 
+{
+	border-bottom: 4px solid #3888FF!important;
+	animation: higlightAnimation 0.8s forwards!important;
+	border-radius: 7px;
+}
+
+.header2 .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item-active, 
+.header2 .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item-open, 
+.header2 .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item-selected, 
+.header2 .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item:hover, 
+.header2 .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu-active, 
+.header2 .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu-open, 
+.header2 .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu-selected, 
+.header2 .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu:hover
+{
+	color: #3888FF!important;
+}
+
+/* 메뉴 마우스 아웃시, 밑줄 사라짐 효과 */
+.ant-menu-horizontal>.ant-menu-item:after, 
+.ant-menu-horizontal>.ant-menu-submenu:after {
+	border-bottom: 4px solid transparent!important;
+	border-radius: 7px!important;
+}
+
+/* 코드얼라이브 밑줄 크기 설정 */
+.ant-menu-horizontal>.ant-menu-item:nth-of-type(2):after, 
+.ant-menu-horizontal>.ant-menu-submenu:nth-of-type(2):after {
+	left: 10px!important;
+	right: 10px!important;
+}
+
+
+
+
+
+
+
+/* 배너슬라이드 하단 버튼 */
+@keyframes carouselBtnAnimation {
+	0%{margin-top: 20px;}
+	100%{margin-top: 0px;}
+}
+
+.mainPage .ant-carousel .slick-dots li{
+	width: 18px!important;
+
+}
+
+.mainPage .ant-carousel .slick-dots li button{
+	height: 5px!important;
+	background:#ECECEC!important;
+	opacity: 1!important;
+	border-radius: 24px!important;
+}
+
+.mainPage .ant-carousel .slick-dots li.slick-active
+{
+	width: 60px!important;
+}
+
+@keyframes carouselSliderAnimation {
+	0%{width: 0%}
+	100%{width: 100%}
+}
+
+/* 슬라이드바의 속도는 animation 의 시간으로 제어 */
+/* 슬라이드바의 진행색상은 여기서 제어 */
+.mainPage .ant-carousel .slick-dots li.slick-active button
+{
+	height: 5px!important;
+	background-color: #1D1D1D!important;
+	animation: carouselSliderAnimation 3s forwards!important;
+}
+
+/* 슬라이드바의 투명 부분 높이 */
+.mainPage .ant-carousel .slick-dots-bottom
+{
+	height: 10px!important;
+} 
+
+
+
+/* ================ 3. 비디오 영역 ================== */
+.videoWrap {
+	width: 100%;
+	height: 840px;
+	background-image: url("./Assets/videoWrapBackground.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+
+.videoWrap>.right>.title{
+	font-family: 'Noto Sans', 'sans-serif';
+	font-weight: 700;
+	font-size: 40px;
+	margin-left: 100px;
+}
+
+.videoWrap>.right>.text{
+	font-family: 'Noto Sans', 'sans-serif';
+	font-weight: 500;
+	font-size: 26px;
+	margin-top: 21.26px;
+	margin-left: 100px;
+}
+
+.videoWrap>.left{
+	/* width: 700px;
+	height: 394px; */
+	width: 585px;
+	height: 313px;
+
+	/* background-image: url("./Assets/videoWrapFrame.png"); */
+	background-image: url("./Assets/videoWrapFrame2.png");
+
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}	
+.videoWrap>.left>video{
+	width: 505px;
+	height: 253px;
+	object-fit: cover;
+	border-radius: 10px;
+	border: 4px solid #85F0FF;
+}
+
+
+.holo {
+	position: relative;
+	z-index: 2;
+	width: 150px;
+	height: 5px;
+	margin: -5px auto 0;
+	/* background-color: rgba(0, 252, 252, 0.35); */
+	background-color: rgba(60, 84, 255, 0);
+	border-radius: 100%;
+	filter: blur(2.5px);
+	transform: perspective(100px) rotateX(-30deg);
+	transform-style: preserve-3d;
+	animation: holographic 1.5s infinite alternate;
+	backface-visibility: hidden;
+	background-image: url("./Assets/holo.png");
+  }
+  .holo:after {
+	position: absolute;
+	left: -10px;
+	right: -10px;
+	content: "";
+	height: 10px;
+	background-color: rgba(0, 252, 252, 0.5);
+	/* background-color: rgba(60, 84, 255, 0); */
+	border-radius: 100%;
+	filter: blur(2.5px);
+  }
+  .holo + .holo {
+	animation-duration: 0.75s;
+	opacity: 0.5;
+  }
+  
+  @keyframes float {
+	from {
+	  will-change: unset;
+	  transform: translateY(-10px);
+	}
+	to {
+	  will-change: transform;
+	  transform: translateY(-30px);
+	}
+  }
+  @keyframes holographic {
+	from {
+	  will-change: box-shadow;
+	  box-shadow: 0 -75px 5px rgba(0, 252, 252, 0.15), 0 -1px 2px rgba(0, 252, 252, 0.5), 0 -45px 5px rgba(0, 252, 252, 0.15), 0 -2px 3px rgba(0, 252, 252, 0.5), 0 -3px 4px rgba(0, 252, 252, 0.5), 0 -4px 6px rgba(0, 252, 252, 0.5), 0 -5px 10px rgba(0, 252, 252, 0.75), 0 -7px 20px rgba(0, 252, 252, 0.75), 0 -10px 30px rgba(0, 252, 252, 0.75), 0 -15px 40px rgba(0, 252, 252, 0.75), 0 -25px 50px rgba(0, 252, 252, 0.75), 0 -35px 60px rgba(0, 252, 252, 0.85), 0 -45px 70px rgba(0, 252, 252, 0.95), 0 -65px 80px #00fcfc, 0 -75px 90px #00fcfc;
+	  /* box-shadow: 0 -75px 5px rgba(60, 84, 255, 0.15), 0 -1px 2px rgba(60, 84, 255, 0.5), 
+	  0 -45px 5px rgba(60, 84, 255, 0.15), 0 -2px 3px rgba(60, 84, 255, 0.5), 0 -3px 4px rgba(60, 84, 255, 0.5), 
+	  0 -4px 6px rgba(60, 84, 255, 0.5), 0 -5px 10px rgba(60, 84, 255, 0.75), 0 -7px 20px rgba(60, 84, 255, 0.75), 
+	  0 -10px 30px rgba(60, 84, 255, 0.75), 0 -15px 40px rgba(60, 84, 255, 0.75), 0 -25px 50px rgba(60, 84, 255, 0.75), 
+	  0 -35px 60px rgba(60, 84, 255, 0.85), 0 -45px 70px rgba(60, 84, 255, 0.95), 0 -65px 80px #00fcfc, 0 -75px 90px #00fcfc; */
+	}
+	to {
+	  will-change: unset;
+	  box-shadow: 0 -1px 5px rgba(0, 252, 252, 0.15), 0 -1px 2px rgba(0, 252, 252, 0.5), 0 -1px 5px rgba(0, 252, 252, 0.15), 0 -2px 3px rgba(0, 252, 252, 0.5), 0 -3px 4px rgba(0, 252, 252, 0.5), 0 -4px 6px rgba(0, 252, 252, 0.5), 0 -5px 7px rgba(0, 252, 252, 0.75), 0 -7px 10px rgba(0, 252, 252, 0.75), 0 -10px 15px rgba(0, 252, 252, 0.75), 0 -15px 20px rgba(0, 252, 252, 0.75), 0 -25px 25px rgba(0, 252, 252, 0.75), 0 -35px 30px rgba(0, 252, 252, 0.85), 0 -45px 35px rgba(0, 252, 252, 0.95), 0 -65px 40px #00fcfc, 0 -75px 50px #00fcfc;
+	  /* box-shadow: 0 -1px 5px rgba(60, 84, 255, 0.15), 0 -1px 2px rgba(60, 84, 255, 0.5), 
+	  0 -1px 5px rgba(60, 84, 255, 0.15), 0 -2px 3px rgba(60, 84, 255, 0.5), 0 -3px 4px rgba(60, 84, 255, 0.5), 
+	  0 -4px 6px rgba(60, 84, 255, 0.5), 0 -5px 7px rgba(60, 84, 255, 0.75), 0 -7px 10px rgba(60, 84, 255, 0.75), 
+	  0 -10px 15px rgba(60, 84, 255, 0.75), 0 -15px 20px rgba(60, 84, 255, 0.75), 0 -25px 25px rgba(60, 84, 255, 0.75), 
+	  0 -35px 30px rgba(60, 84, 255, 0.85), 0 -45px 35px rgba(60, 84, 255, 0.95), 0 -65px 40px #00fcfc, 0 -75px 50px #00fcfc; */
+	}
+  }
+
+
+/* ================ 4. 프로그램 카드영역 ================== */
+.Programs {
+	background-image: url(./Assets/programsBackground.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.ant-card{
+	cursor: pointer;
+}
+
+.ant-card-bordered .ant-card-cover {
+	overflow: hidden!important;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+}
+
+.ant-card:nth-of-type(2){
+	margin-left: 50px!important;
+}
+.ant-card:nth-of-type(3){
+	margin-left: 50px!important;
+}
+
+.ant-card-cover img {
+	transition: 0.5s!important;;
+}
+
+.ant-card-meta-title {
+	margin-top: 50px!important;
+	font-size: 30px!important;
+	color: #404040;
+	font-family: 'Noto Sans', 'sans-serif';
+	font-weight: 700!important;
+}
+
+.ant-card-meta-description {
+	margin-top: 25px!important;
+	font-size: 24px!important;
+	color: #383838;
+	font-family: 'Noto Sans', 'sans-serif';
+	font-weight: 500!important;
+	letter-spacing: -0.04em!important;
+}
+
+
+/* 프로그램 소개 */
+@keyframes typing {
+	0% {
+		width: 0%;
+	}
+	50%{
+		width: 50%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+.typingEffect {
+	font-size: 23px;
+	/* transform: translate(-50%, -50%); */
+	/* position: relative; */
+	position: absolute;
+	white-space: nowrap;
+	color: transparent;
+	min-width: 11px;
+	font-family: "thisHow";
+	font-weight: 700;
+}
+
+.typingEffect::before {
+	content: "코딩은 어려워..";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 32px;
+	color: #fff;
+	overflow: hidden;
+	border-right: 1px solid #3866D0;
+	animation: typing 1s steps(20);
+	/* animation-iteration-count: infinite; */
+}
+
+.typingEffect2::before {
+	content: "그냥 외우는게 공식 아니야?";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 32px;
+	color: #3A71F0;
+	overflow: hidden;
+	border-right: 1px solid #3866D0;
+	animation: typing 1s 1s steps(20);
+	/* animation-iteration-count: infinite; */
+}
+
+.typingEffect3::before {
+	content: "그대로 따라하기만 하라던데...";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 32px;
+	color: #3A71F0;
+	overflow: hidden;
+	border-right: 1px solid #3866D0;
+	animation: typing 1s 2s steps(20);
+	/* animation-iteration-count: infinite; */
+}
+
+.typingEffect4::before {
+	content: "너무 재미없어...";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 32px;
+	color: #fff;
+	overflow: hidden;
+	border-right: 1px solid #3866D0;
+	animation: typing 1s 3s steps(20);
+	/* animation-iteration-count: infinite; */
+}
+
+/* .typingEffect5::before {
+	content: "교육이 업무에 도움이\A되는지 잘 모르겠어요...";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 32px;
+	color: #fff;
+	overflow: hidden;
+	border-right: 1px solid black;
+	animation: typing 1s 3s steps(9);
+	animation-iteration-count: infinite;
+} */
+
+/* .typingEffect6::before {
+	content: "너무 재미없어...";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 32px;
+	color: #fff;
+	overflow: hidden;
+	border-right: 1px solid black;
+	animation: typing 1s 3s steps(9);
+	animation-iteration-count: infinite;
+} */
+
+/* .typingEffect7::before {
+	content: "너무 재미없어...";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 32px;
+	color: #fff;
+	overflow: hidden;
+	border-right: 1px solid black;
+	animation: typing 1s 3s steps(9);
+	animation-iteration-count: infinite;
+} */
+
+/* 내강의실 영역 */
+
+.fakeBar {
+	animation: annotation_ani 5s;
+}
+
+
+@keyframes annotation_ani {
+	from {
+	  width: 0%;
+	}
+	to {
+	  width: 100%;
+	}
+}
+
+.ant-table-wrapper {
+	width: 100%!important;
+}
+
+/* 마이페이지 > 내비게이션 */
+.ant-layout-sider {
+	/* MyPageNavigation > Menu > style > width의 크기와 일치해야 함 */
+	max-width: 187px!important;
+	min-width: 187px!important;
+
+	/* 내비게이션 위치 */
+	margin-top: 191px!important;
+	margin-left: 110px!important;
+
+	position: fixed!important;
+	background: transparent!important;
+	border-radius: 8px!important;
+}
+
+
+/* 내비게이션의 버튼 스타일 설정 */
+.MyPageNavigation>.ant-menu-item {
+	height: 69px!important;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 22px;
+	text-align: center;
+
+	color: #484D58!important;
+	font-family: 'Noto Sans', 'sans-serif';
+	padding-left: 32px!important;
+
+	/* 버튼 간격 설정 */
+	margin-bottom: 13px!important;
+
+	background-color: #fff!important;
+	border: 1px solid #CBD1DE!important;
+	border-radius: 15px;
+}
+
+.ant-menu-inline .ant-menu-item::after {
+	border-right: none!important;
+}
+
+
+.MyPageNavigation>.ant-menu-item.ant-menu-item-selected {
+	background-color: #484D58!important;
+	color: #fff!important;
+}
+
+
+/* 마이페이지 전체 제어버튼 */
+/* 마이페이지 > 수강중코스 > 슬라이드 버튼 */
+.myPage .ant-carousel .slick-prev, 
+.myPage .ant-carousel .slick-prev:focus, 
+.myPage .ant-carousel .slick-prev:hover
+{
+	top : 180px!important;
+	width: 24px;
+	height: 53px;
+	background-image: url(./Assets/prevBtn.png);
+	left: 95px!important;
+	z-index: 5!important;
+}
+
+.myPageMyClassroom .ant-carousel .slick-prev, 
+.myPageMyClassroom .ant-carousel .slick-prev:focus, 
+.myPageMyClassroom .ant-carousel .slick-prev:hover
+{
+	top : 230px!important;
+	width: 24px;
+	height: 53px;
+	background-image: url(./Assets/prevBtn.png);
+	left: 100px!important;
+	z-index: 5!important;
+}
+
+.myPage .ant-carousel .slick-next, 
+.myPage .ant-carousel .slick-next:focus, 
+.myPage .ant-carousel .slick-next:hover
+{
+	top : 180px!important;
+	width: 24px;
+	height: 53px;
+	background-image: url(./Assets/nextBtn.png);
+	right: 95px!important;
+	z-index: 5!important;
+} 
+
+.myPageMyClassroom .ant-carousel .slick-next, 
+.myPageMyClassroom .ant-carousel .slick-next:focus, 
+.myPageMyClassroom .ant-carousel .slick-next:hover
+{
+	top : 230px!important;
+	width: 24px;
+	height: 53px;
+	background-image: url(./Assets/nextBtn.png);
+	right: 100px!important;
+	z-index: 5!important;
+} 
+
+/* 에디터 italic 작동안하는 문제 고침 */
+.ql-editor em {
+	font-style: italic;
+}
+
+
+pre {
+	background-color: #23241f;
+	color: #f8f8f2;
+	padding: 5px 10px;
+	border-radius: 3px;
+}
+
+
+/* 메인페이지 무한히 흐르는 롤링 배너 */
+#slider {
+	overflow:hidden;
+	position:relative;
+	/* 슬라이더 위치 */
+	top: 450px;
+	/* border:20px solid red; */
+	/* 이미지 보여지는 뷰 부분 */
+	/* width:1440px;  */
+	width: 100%;
+	height:200px;
+ }
+ .image-box {
+	/* 원본+클론의 총 합 */
+	width:2960px; 
+	height:100%;
+	display:flex;
+	flex-wrap:nowrap;
+	animation: bannermove 20s linear infinite;
+ }
+ @keyframes bannermove {
+   0% {
+	   transform: translate(0, 0);
+   }
+   100% {
+	   transform: translate(-50%, 0);
+   }
+ }
+
+/* 입력창 모서리 디자인 */
+.ant-select-selector {
+	border-radius: 4px!important;
+}
+
+
+/* 모달창 디자인 변경 */
+.ant-modal-content {
+	border-radius: 25px!important;
+}
+
+.ant-modal-footer {
+	border-top: none!important;
+}
+
+
+/* 파이썬 > sixthLine > 슬라이드 버튼 */
+/* .python .ant-carousel {
+	box-shadow: 0px 11px 14px rgba(0, 0, 0, 0.1);
+} */
+
+.python .sixthLine	.ant-carousel .slick-list {
+	border-radius: 24px;
+	box-shadow: 0px 11px 14px rgba(0, 0, 0, 0.1);
+}
+
+
+.python .sixthLine	.ant-carousel .slick-prev, 
+.python .sixthLine	.ant-carousel .slick-prev:focus, 
+.python .sixthLine	.ant-carousel .slick-prev:hover {
+	top : 380px!important;
+	width: 30px;
+	height: 57px;
+	background-image: url(./Assets/pythonPrevBtn.png);
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	left: -80px!important;
+	z-index: 5!important;
+}
+
+.python .sixthLine	.ant-carousel .slick-next, 
+.python .sixthLine	.ant-carousel .slick-next:focus, 
+.python .sixthLine	.ant-carousel .slick-next:hover{
+	top : 380px!important;
+	width: 30px;
+	height: 57px;
+	background-image: url(./Assets/pythonNextBtn.png);
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	right: -80px!important;
+	z-index: 5!important;
+} 
+
+
+.python .seventhLine .ant-carousel .slick-list {
+	height: 590px!important;
+	padding-left: 15px!important;
+}
+
+.python .seventhLine	.ant-carousel .slick-prev, 
+.python .seventhLine	.ant-carousel .slick-prev:focus, 
+.python .seventhLine	.ant-carousel .slick-prev:hover {
+	top : 380px!important;
+	width: 30px;
+	height: 57px;
+	background-image: url(./Assets/pythonPrevBtn.png);
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	left: -80px!important;
+	z-index: 5!important;
+}
+
+.python .seventhLine	.ant-carousel .slick-next, 
+.python .seventhLine	.ant-carousel .slick-next:focus, 
+.python .seventhLine	.ant-carousel .slick-next:hover{
+	top : 380px!important;
+	width: 30px;
+	height: 57px;
+	background-image: url(./Assets/pythonNextBtn.png);
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	right: -80px!important;
+	z-index: 5!important;
+} 
+
+
+/* chart2 는 대시보드 > 라인 차트 */
+/* chart3 은 내강의실 > 라인 차트 */
+#chart2::-webkit-scrollbar {
+	height: 24px;
+	background-color: transparent;
+	border-radius: 108px;
+}
+
+#chart3::-webkit-scrollbar {
+	height: 24px;
+	background-color: transparent;
+	border-radius: 108px;
+}
+
+#chart2::-webkit-scrollbar-track {
+	background-clip: content-box;
+	border: 8px solid transparent;
+	background-color: #B5CBFF;
+	border-radius: 20px;
+}
+
+#chart3::-webkit-scrollbar-track {
+	background-clip: content-box;
+	border: 8px solid transparent;
+	background-color: #B5CBFF;
+	border-radius: 20px;
+}
+
+#chart2::-webkit-scrollbar-thumb {
+	width: 24px;
+	height: 24px;
+	background-color: #6B98FF;
+    border-radius: 50%;
+    border: 2px solid transparent;
+	cursor: pointer
+}
+
+#chart3::-webkit-scrollbar-thumb {
+	width: 24px!important;
+	background-color: #6B98FF;
+    /* border-radius: 50%; */
+    border: 2px solid transparent;
+	cursor: pointer
+}
+
+#chart2::-webkit-scrollbar-thumb:hover {
+	background-color: red;
+}
+
+#chart3::-webkit-scrollbar-thumb:hover {
+	background-color: red;
+}
+
+
+.myPage .ant-tabs-tab {
+	width: 142px!important;
+	height: 50px!important;
+	border: 1px solid rgba(107, 152, 255, 0.5);
+	border-radius: 9px 9px 0px 0px!important;
+	display: flex;
+	justify-content: center;
+	margin-left: 0px!important;
+	box-shadow: 0px 1px 14px rgba(65, 149, 255, 0.23);
+	font-family: 'Noto Sans', 'sans-serif';
+	font-weight: 600;
+	font-size: 20px;
+	color: #6B98FF;
+}
+.ant-modal-root .ant-tabs-tab {
+	width: 118px!important;
+	height: 42px!important;
+	border: 1px solid rgba(107, 152, 255, 0.5);
+	border-radius: 9px 9px 0px 0px!important;
+	display: flex;
+	justify-content: center;
+	margin-left: 0px!important;
+	box-shadow: 0px 1px 14px rgba(65, 149, 255, 0.23);
+	font-family: 'Noto Sans', 'sans-serif';
+	font-weight: 600;
+	font-size: 18px;
+	color: #6B98FF;
+}
+
+
+.myPage .ant-tabs-tab.ant-tabs-tab-active>.ant-tabs-tab-btn {
+	/* background-color: #6B98FF!important; */
+	color: #fff!important;
+}
+.ant-modal-root .ant-tabs-tab.ant-tabs-tab-active>.ant-tabs-tab-btn {
+	/* background-color: #6B98FF!important; */
+	color: #fff!important;
+}
+
+.myPage .ant-tabs-tab.ant-tabs-tab-active {
+	background-color: #6B98FF!important;
+}
+.ant-modal-root .ant-tabs-tab.ant-tabs-tab-active {
+	background-color: #6B98FF!important;
+}
+
+.myPage .ant-table-cell {
+	height: 57.67px!important;
+	background-color: #fff!important;
+	border-bottom: 1px solid rgba(107, 152, 255, 0.5);
+	border-right: 1px solid rgba(107, 152, 255, 0.5);
+	font-family: 'Noto Sans', 'sans-serif';
+	font-weight: 700;
+	font-size: 20px;
+	color: #7A7A7A;
+	text-align: center;
+	/* border: 1px solid rgba(107, 152, 255, 0.5); */
+}
+.ant-modal-root .ant-table-cell {
+	height: 57.67px!important;
+	background-color: #fff!important;
+	border-bottom: 1px solid rgba(107, 152, 255, 0.5);
+	border-right: 1px solid rgba(107, 152, 255, 0.5);
+	font-family: 'Noto Sans', 'sans-serif';
+	font-weight: 700;
+	font-size: 20px;
+	color: #7A7A7A;
+	text-align: center;
+	/* border: 1px solid rgba(107, 152, 255, 0.5); */
+}
+
+.myPage .ant-table-content {
+	border-left: 1px solid rgba(107, 152, 255, 0.5)!important;
+	border-top: 1px solid rgba(107, 152, 255, 0.5)!important;
+	
+}
+.ant-modal-root .ant-table-content {
+	border-left: 1px solid rgba(107, 152, 255, 0.5)!important;
+	border-top: 1px solid rgba(107, 152, 255, 0.5)!important;
+	
+}
+
+
+/* 내강의실 버튼 스타일 */
+.currCourse_Frame .ant-btn:active, .currCourse_Frame .ant-btn:focus, .currCourse_Frame .ant-btn:hover {
+	background: rgba(107, 152, 255, 0.1)!important;
+}
+
+
+/* faq 탭 버튼 스타일 */
+.faq .Tabs .ant-btn:active, .faq .Tabs .ant-btn:focus, .faq .Tabs .ant-btn:hover {
+	background-color: #000000!important;
+	color: #fff!important;
+}
+
+/* .a1 {
+	transition: 0.5s ease-in-out;
+} */
+
+.notice .list .title:hover {
+	font-weight: 700!important;
+	text-decoration: underline;
+}
+
+.categoryNavBtn:hover {
+	font-weight: 700!important;
+	text-decoration: underline;
+}
+
+.ghostBtn:hover
+{
+	/* border-bottom: 4px solid #3888FF!important; */
+	background-color: #3888FF!important;
+	animation: higlightAnimation 0.8s forwards!important;
+	border-radius: 7px;
+}
+
